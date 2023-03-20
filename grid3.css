@@ -9,8 +9,13 @@ main{
     background-color: antiquewhite;
     margin: 0 auto;
     display: grid;
-    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 15vw 70vw 15vw;
+    grid-template-areas:
+    "h h h"
+    "m c c"
+    "f f f ";
+    grid-gap: 5px 10px;
 }
 
 header, nav, article, footer {
@@ -23,21 +28,21 @@ header, nav, article, footer {
 }
 
 header{
-    background-color: blue;
-    grid-column: span 3;
+    background-color: sandybrown;
+    grid-area: h;
 }
 
 nav{
-    background-color: red;
-    grid-column: 1 span;
+    background-color:hotpink;
+    grid-area: m;
 }
 
 article{
-    background-color: brown;
-    grid-column: 2 span;
+    background-color: teal;
+    grid-area: c;
 }
 
 footer{
-    background-color: grey;
-    grid-column: span 3;
+    background-color: rebeccapurple;
+    grid-area: f;
 }
